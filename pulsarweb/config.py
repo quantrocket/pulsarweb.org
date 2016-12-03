@@ -1,14 +1,11 @@
 import os
 
-DESCRIPTION = ('GiottoJS is a javascript visualization library built on '
-               'top of d3js. '
-               'It is designed to visualize both SVG and Canvas elements '
-               'with a simple API. AngularJS integration')
+DESCRIPTION = ('Pulsar - asynchronous framework for python 3')
 AUTHENTICATION_BACKENDS = ['lux.core:SimpleBackend']
 CONTENT_REPO = os.path.dirname(os.path.dirname(__file__))
 API_URL = '/api'
-APP_NAME = 'GiottoJs'
-HTML_TITLE = 'GiottoJs'
+APP_NAME = 'PulsarWeb'
+HTML_TITLE = 'Pulsar'
 DEFAULT_CONTENT_TYPE = 'text/html'
 EXTENSIONS = [
     'lux.extensions.sitemap',
@@ -32,19 +29,11 @@ CONTENT_GROUPS = {
 
 HTML_SCRIPTS = [
     '/require.js',
-    '/giotto-dev.js',
-    '/giottojs'
+    '/pulsar.js'
 ]
 
-if os.environ.get('GIOTTO_ENV') == 'prod':
-    HTML_SCRIPTS = [
-        '/require.js',
-        '/latest/giotto',
-        '/giottojs'
-    ]
-
 HTML_LINKS = [
-    "/giottojs-default.css",
+    "/pulsar.css",
     {"rel": "apple-touch-icon", "sizes": "57x57", "href": "/icons/apple-icon-57x57.png"},
     {"rel": "apple-touch-icon", "sizes": "57x57", "href": "/icons/apple-icon-57x57.png"},
     {"rel": "apple-touch-icon", "sizes": "60x60", "href": "/icons/apple-icon-60x60.png"},
